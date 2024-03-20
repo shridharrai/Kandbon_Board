@@ -10,7 +10,14 @@ export type Column = {
 
 export type MetaData = {
   type: DataTypes;
-  column: Column;
+  column?: Column;
+  task?: Task;
 };
 
 export type CustomData = SortableData & MetaData;
+
+export type Task = {
+  id: Id;
+  columnId: Id;
+  content: string;
+};
